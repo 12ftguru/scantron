@@ -88,7 +88,7 @@ Ext.define('SNS.controller.MyController', {
                     this.getScanField().setValue(result.text);
                 },
                 function (error) {
-                    alert("Scanning failed: " + error);
+                    Ext.Msg.alert("Scanning failed: " + error);
                 }
             );
             } else {
