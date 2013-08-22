@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Status"
+    },
+    "designerId": "150b048b-d317-4123-b0d6-289f25fb50e4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "statuscode",
+                "type": "int"
+            },
+            "designerId": "d3aba9ca-4e46-459b-906d-199a4af4d629"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "status",
+                "type": "string"
+            },
+            "designerId": "f7b777b0-bd87-4655-bb02-209d4fda2f7d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultValue": null,
+                "name": "elapsed",
+                "type": "float"
+            },
+            "designerId": "319dc984-143d-4270-a782-880885121bd7"
+        }
+    ]
+}

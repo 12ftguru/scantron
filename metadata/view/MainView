@@ -1,0 +1,163 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "mainView",
+        "ui": "",
+        "designer|userClassName": "MainView",
+        "designer|userAlias": "mainview",
+        "designer|initialView": true,
+        "layout": "hbox"
+    },
+    "designerId": "1ac43aed-5822-42ae-bb49-db141af6328f",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "layout": "vbox"
+            },
+            "designerId": "100faed9-fb00-472d-9b1e-1c5fc4ebde92",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Stack&Scan"
+                    },
+                    "designerId": "6ce8903f-77df-4692-8bb6-82c432904d2f",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null
+                            },
+                            "designerId": "97b98f14-9d4f-428f-ad70-c4a9a26c810a"
+                        },
+                        {
+                            "type": "Ext.SegmentedButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|pack": "center",
+                                "margin": 25,
+                                "minWidth": null,
+                                "width": null
+                            },
+                            "designerId": "814fb0c7-1c57-4343-8b61-56ff23e2c537",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "maxWidth": null,
+                                        "minWidth": 300,
+                                        "text": "Start Scan"
+                                    },
+                                    "designerId": "0842e668-3e9f-462d-ac25-7a066e67b780"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "minWidth": 150,
+                                        "text": "Cancel"
+                                    },
+                                    "designerId": "adee0acc-1cc0-4108-8c4f-8eeb114f8725"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "padding": null,
+                        "layout": "fit"
+                    },
+                    "designerId": "55a3185d-9dd7-4004-81e5-2e83a81b72d8",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.DataView",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 25 25 25",
+                                "store": "StatusStore"
+                            },
+                            "designerId": "56f59097-c369-4942-a3d3-fb08d97ad756",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "<div><div class=\"status {statuscode}\">{status}</div><div class=\"time\"><tpl if=\"elapsed &gt; 0\">( {elasped} ms )</tpl></div></div>"
+                                        ],
+                                        "designer|displayName": "itemTpl"
+                                    },
+                                    "designerId": "e2cc57c8-e8ed-4bc3-a649-96232c86d03a"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "layout": "fit"
+            },
+            "designerId": "f084938a-6fd4-4076-957a-06c71b5b231f"
+        }
+    ]
+}
