@@ -73,8 +73,22 @@ Ext.define('SNS.controller.MyController', {
     startScan: function() {
         console.log('Start Scan');
         var status = this.clearStatus(false);
-
         this.getScanField().focus();
+        if (cordova && cordova.require) {
+            var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+
+            scanner.scan(
+                function (result) {
+                    Ext.Msg.alert("We got a barcode\n" +
+                          "Result: " + result.text + "\n" +
+                          "Format: " + result.format + "\n" +
+                          "Cancelled: " + result.cancelled);
+                    this.getScanField().setValue(result.text);
+                },
+                function (error) {
+                    alert("Scanning failed: " + error);
+                }
+            );
 
     },
     checkURL: function(value) {
