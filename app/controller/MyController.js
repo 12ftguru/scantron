@@ -83,10 +83,10 @@ Ext.define('SNS.controller.MyController', {
                           "Result: " + result.text + "\n" +
                           "Format: " + result.format + "\n" +
                           "Cancelled: " + result.cancelled);
-                    console.log("Result: " + result.text + "\n" +
-                          "Format: " + result.format + "\n" +
-                          "Cancelled: " + result.cancelled);
-                    me.getScanField().setValue(result.text);
+                    console.log("Result: [%s]\n" +
+                          "Format: [%s]\n" +
+                          "Cancelled: [%o]",result.text,result.format,result.cancelled);
+                    me.getScanField().setValue(Ext.String.trim(result.text));
                 },
                 function (error) {
                     Ext.Msg.alert("Scanning failed: " + error);
