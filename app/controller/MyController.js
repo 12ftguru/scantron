@@ -89,7 +89,7 @@ Ext.define('SNS.controller.MyController', {
                     alert("Scanning failed: " + error);
                 }
             );
-
+            }
     },
     checkURL: function(value) {
         if (/^(https?|ftp|file):\/\/.+$/.test(value)) {
