@@ -82,6 +82,9 @@ Ext.define('SNS.controller.MyController', {
                           "Result: " + result.text + "\n" +
                           "Format: " + result.format + "\n" +
                           "Cancelled: " + result.cancelled);
+                    console.log("Result: " + result.text + "\n" +
+                          "Format: " + result.format + "\n" +
+                          "Cancelled: " + result.cancelled);
                     this.getScanField().setValue(result.text);
                 },
                 function (error) {
