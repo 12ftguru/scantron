@@ -55,7 +55,7 @@ Ext.define('SNS.controller.MyController', {
     },
     parseValue: function(field, newValue, oldValue) {
         if (newValue !== oldValue && newValue !== "") {
-            this.status('New Code: '+newValue);
+            this.status('Data: '+newValue);
             this.checkISBN(newValue);
             this.checkURL(newValue);
             this.checkIP(newValue);
@@ -85,6 +85,7 @@ Ext.define('SNS.controller.MyController', {
                     console.log("Result: [%s]\n" +
                           "Format: [%s]\n" +
                           "Cancelled: [%o]",result.text,result.format,result.cancelled);
+		    me.status("Scanned code of type: "+Ext.String.trim(result.format));
                     me.getScanField().setValue(Ext.String.trim(result.text));
                 },
                 function (error) {
