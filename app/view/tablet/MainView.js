@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('SNS.view.MainView', {
+Ext.define('SNS.view.tablet.MainView', {
     extend: 'Ext.Panel',
     alias: 'widget.mainview',
 
@@ -50,15 +50,10 @@ Ext.define('SNS.view.MainView', {
                                 items: [
                                     {
                                         xtype: 'button',
-                                        minWidth: 150,
+                                        minWidth: 250,
+					ui: 'action-round',
                                         action: 'scan',
                                         text: 'Start Scan'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        minWidth: 150,
-                                        action: 'cancel',
-                                        text: 'Cancel'
                                     }
                                 ]
                             }
@@ -87,26 +82,23 @@ Ext.define('SNS.view.MainView', {
             {
                 xtype: 'container',
                 id: 'detailview',
+		styleHtmlContent: true,
                 flex: 1,
                 tpl: [
                     '<tpl for=\".\">',
-                    '<tpl if=\"bib_key\">',
-                    '<tpl for=\"details\">',
-                    '<h1>{full_title}</h1>',
-                    '<h2>by {by_statement}</h2>',
                     '<tpl if=\"cover\">',
                     '<tpl for=\"cover\">',
                     '<img src=\"{large}\" />',
                     '</tpl>',
-                    '</tpl>',
+		    '</tpl>',
+                    '<h1>{title}</h1>',
+                    '<h2>{by_statement}</h2>',
                     '<tpl if=\"links\">',
                     'Links:<br /><ul>',
                     '<tpl for=\"links\">',
                     '<li><a href=\"{url}\">{title}</a></li>',
                     '</tpl>',
                     '</ul>',
-                    '</tpl>',
-                    '</tpl>',
                     '</tpl>',
                     '</tpl>'
                 ]

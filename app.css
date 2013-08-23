@@ -1,0 +1,16 @@
+.time {
+position: absolute;
+right: 0;
+bottom: 0;
+font-size: 80%;
+color: #999;
+}
+
+.x-dataview-item {
+background: #fff;
+margin: 5px 0;
+padding: 10px;
+font-size: 125%;
+position: relative;
+}
+

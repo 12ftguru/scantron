@@ -26,17 +26,7 @@ Ext.application({
     stores: [
         'Status'
     ],
-    views: [
-        'MainView'
-    ],
-    controllers: [
-        'MyController'
-    ],
     name: 'SNS',
-
-    launch: function() {
-
-        Ext.create('SNS.view.MainView', {fullscreen: true});
-    }
-
+    profiles: ['Phone', 'Tablet']
+    
 });

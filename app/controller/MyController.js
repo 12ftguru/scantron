@@ -49,7 +49,7 @@ Ext.define('SNS.controller.MyController', {
         this.getStatusView().getStore().removeAll();
         this.getDetailView().setData({});
         if (msg !== false) {
-            msg = msg || 'Click the "Start Scan" button to begin.';
+            msg = msg || '';
             return this.status(msg);
         }
     },
@@ -65,7 +65,7 @@ Ext.define('SNS.controller.MyController', {
     },
     doClear: function(field) {
         field.setValue("");
-        this.clearStatus();
+        this.clearStatus(false);
     },
     cancelScan: function() {
         this.doClear(this.getScanField());
@@ -76,7 +76,6 @@ Ext.define('SNS.controller.MyController', {
         var status = me.clearStatus(false);
         if (cordova && cordova.require) {
             var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
             scanner.scan(
                 function (result) {
                     Ext.Msg.alert(
@@ -119,16 +118,17 @@ Ext.define('SNS.controller.MyController', {
                 method: 'GET',
                 params: {
                     bibkeys: 'ISBN:'+value,
-                    jscmd: 'details'
+                    jscmd: 'data'
                 },
                 success: function(resp, req) {
                     console.log('Success! Returned ISBN Request');
                     var end = Date.now(), elapsed = end - start;
                     if (Ext.isObject(resp['ISBN:'+value])) {
                         var book = resp['ISBN:'+value];
-                        status.set('status', 'ISBN Query Complete: '+book.details.title);
+                        status.set('status', 'ISBN Query Complete: '+book.title);
                         console.log('Book Found: %o',book);
                         this.getDetailView().setData(book);
+			this.getDetailView().enable();
                     } else {
                         status.set('status', 'ISBN Query: Book Not Found');
                     }

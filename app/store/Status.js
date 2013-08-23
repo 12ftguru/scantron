@@ -21,10 +21,6 @@ Ext.define('SNS.store.Status', {
     ],
 
     config: {
-        data: [{
-                status: 'Click the "Start Scan" button to begin.'
-            }
-        ],
         model: 'SNS.model.Status',
         storeId: 'StatusStore'
     }
