@@ -3,7 +3,8 @@ Ext.define('SNS.profile.Tablet', {
 
     config: {
         name: 'Tablet',
-        views: ['MainView']
+        views: ['MainView'],
+	controllers: ['MyController']
     },
 
     isActive: function() {
